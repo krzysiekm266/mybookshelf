@@ -1,3 +1,8 @@
+@import '../../../../../variables.scss';
+* {
+  display: flex;
+}
+
 footer {
-  background-color: $mk;
+  border: 2px solid gray;
 }

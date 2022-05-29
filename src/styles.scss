@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import './variables.scss';
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,4 +11,4 @@ html,body {
   height: 100%;
 }
 
-$mk:red;
+
