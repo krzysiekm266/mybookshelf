@@ -1,0 +1,15 @@
+@import "../../../variables.scss";
+ * {
+   display: flex;
+ }
+
+ .books-list {
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: aqua;
+   width: 100%;
+   height: 100%;
+
+
+ }
