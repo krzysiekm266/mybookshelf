@@ -1,3 +1,9 @@
 <div class="footer">
-footer
+  <div class="menu">
+    <a *ngFor="let item of menu" [routerLink]="item">{{ item }}</a>
+  </div>
+  <div class="tech-info">
+    <fa-icon [icon]="faLaravel" size="lg"></fa-icon>
+    <fa-icon [icon]="faAngular" size="lg"></fa-icon>
+  </div>
 </div>

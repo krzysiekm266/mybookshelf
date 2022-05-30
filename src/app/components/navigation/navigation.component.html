@@ -1,9 +1,13 @@
 <nav class="navigation">
-  <div class="hamburger">
+  <div class="hamburger" (click)="openMenu()">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
+  </div>
+  <div class="hamburger-menu" *ngIf="open">
+    <a *ngFor="let item of menu" [routerLink]="item" (click)="closeMenu()">{{ item }} </a>
+    <button (click)="closeMenu()">close</button>
   </div>
   <h1>Bookshelf</h1>
   <div class="social-media">

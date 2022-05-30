@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-bookshelf',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bookshelf.component.scss']
 })
 export class BookshelfComponent implements OnInit {
+  @Output() menu:string[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
+    this.menu = [
+      'books','register','login'
+    ];
   }
 
 }

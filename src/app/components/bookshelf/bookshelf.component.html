@@ -1,9 +1,9 @@
 <div class="bookshelf">
 
-  <app-navigation></app-navigation>
+  <app-navigation [menu]="menu"></app-navigation>
   <app-search></app-search>
   <div class="content">
     <router-outlet></router-outlet>
   </div>
-  <app-footer></app-footer>
+  <app-footer [menu]="menu"></app-footer>
 </div>

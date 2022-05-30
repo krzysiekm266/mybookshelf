@@ -4,10 +4,42 @@
 }
 
 .footer {
+  flex-direction: column;
+  overflow: auto;
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 5vh;
+  height: auto;
   min-height: 5vh;
-  background-color: black;
+  background-color: $bg-color;
 }
+.menu {
+  flex-direction: column;
+  padding: 4px;
+}
+.tech-info {
+  width: 100%;
+  height: auto;
+  min-height: 20px;
+  flex-direction: row;
+  margin :8px 16px;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: $bg-color;
+  fa-icon {
+    margin: 4px ;
+    padding: 4px;
+    height: auto;
+    width: auto;
+    color: $text-color;
+    &:hover {
+      color: $hover-color;
+    }
+  }
+}
+a {
+  padding: 4px;
+  color: $text-color;
+}
+
+
