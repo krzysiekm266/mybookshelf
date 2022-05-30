@@ -1,0 +1,19 @@
+@import "../../../variables.scss";
+
+* {
+  display: flex;
+}
+
+.social-media {
+  margin-right: 16px;
+  gap: 8px;
+ // background-color: aqua;
+}
+
+fa-icon {
+  color: white;
+
+  &:hover {
+    color: red;
+  }
+}

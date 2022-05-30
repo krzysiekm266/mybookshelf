@@ -12,6 +12,9 @@ import { BookComponent } from './components/book/book.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchComponent } from './components/search/search.component';
+import { LogoComponent } from './components/logo/logo.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SocialMediaComponent } from './components/social-media/social-media.component';
 
 
 
@@ -24,13 +27,16 @@ import { SearchComponent } from './components/search/search.component';
     BookComponent,
     NavigationComponent,
     FooterComponent,
-    SearchComponent
+    SearchComponent,
+    LogoComponent,
+    SocialMediaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [FormBuilder],
   bootstrap: [AppComponent]

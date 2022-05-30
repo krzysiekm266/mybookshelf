@@ -1,0 +1,13 @@
+@import "../../../variables.scss";
+
+* {
+  display: flex;
+}
+
+.logo {
+  width: 100vw;
+  height: 15vh;
+  min-height: 15vh;
+  background-color: black;
+
+}
