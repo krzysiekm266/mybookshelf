@@ -17,3 +17,8 @@ fa-icon {
     color: red;
   }
 }
+@media screen and (min-width:600px){
+  fa-icon {
+    size: '4x';
+  }
+}

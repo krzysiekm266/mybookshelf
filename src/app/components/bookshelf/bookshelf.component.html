@@ -1,7 +1,12 @@
 <div class="bookshelf">
-
+  <div class="logo">
+    <app-logo></app-logo>
+  </div>
   <app-navigation [menu]="menu"></app-navigation>
-  <app-search></app-search>
+  <div class="search">
+    <app-search></app-search>
+  </div>
+
   <div class="content">
     <router-outlet></router-outlet>
   </div>

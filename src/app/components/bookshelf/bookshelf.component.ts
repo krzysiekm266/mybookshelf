@@ -12,7 +12,7 @@ export class BookshelfComponent implements OnInit {
 
   ngOnInit(): void {
     this.menu = [
-      'books','register','login'
+      'books','about','register',
     ];
   }
 

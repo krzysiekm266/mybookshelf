@@ -1,3 +1,20 @@
 <div class="books-list">
-  booklist
+  <span class="page-title">Books</span>
+ <table>
+   <tr class="header">
+
+     <th>Title</th>
+     <th>Menu</th>
+   </tr>
+   <tr *ngFor="let book of books">
+     <td class="title">
+      <button>details</button>
+       {{ book.title }}
+     </td>
+     <td>
+       <button>delete</button>
+       <button>edit</button>
+     </td>
+   </tr>
+ </table>
 </div>

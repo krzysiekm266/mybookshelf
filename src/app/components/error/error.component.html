@@ -1,0 +1,6 @@
+<div class="error">
+
+  <fa-icon *ngIf="errors" [icon]="faCircleXmark" size="1x"[ngStyle]="{'color':'red'}"></fa-icon>
+  <fa-icon *ngIf="!errors" [icon]="faCircleCheck" size="1x"[ngStyle]="{'color':'green'}"></fa-icon>
+  <p [ngStyle]="errors ? {'color':'red'} : {'color':'green'}">{{ msg }}</p>
+</div>

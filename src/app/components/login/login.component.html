@@ -1,0 +1,20 @@
+<div class="login">
+  <span class="page-title">Login</span>
+  <div>
+    <form (ngSubmit)="login()" [formGroup]="loginForm">
+      <label for="email">Email: </label>
+      <input type="email" name="email" formControlName="email" id="email">
+      <label for="password">Password: </label>
+      <input type="password" name="password" formControlName="password" id="password">
+      <button type="submit" [disabled]="!loginForm.valid">
+        Login
+      </button>
+    </form>
+  </div>
+  <div class="errors">
+    <app-error [errors]="loginForm.get('email')?.hasError('required') || loginForm.get('email')?.hasError('email')"
+      msg="Email is incorrect!"></app-error>
+    <app-error [errors]="loginForm.get('password')?.hasError('required')" msg="Password required!"></app-error>
+  </div>
+
+</div>

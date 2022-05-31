@@ -1,15 +1,54 @@
 @import "../../../variables.scss";
- * {
-   display: flex;
- }
 
  .books-list {
+   display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: center;
-   background-color: aqua;
+   justify-content: flex-start;
+   //background-color: aqua;
    width: 100%;
    height: 100%;
+  padding: 8px;
+ }
+ table, th, td {
 
+  border: 2px solid black;
+  border-collapse: collapse;
+  width: auto;
+  padding: 4px;
+  text-align: center;
+ }
+
+ table {
+   width: 100%;
+   background-color: $bg-table-books;
+   box-shadow: 3px 3px 3px black;
+ }
+
+td.title {
+text-align: left;
+}
+
+.header {
+  background-image: linear-gradient(30deg,$hover-color,$bg-table-books);
+}
+
+ .page-title {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   align-self: flex-start;
+   padding: 8px;
+   border: 2px solid black;
+   margin:8px 0;
+   width:10vw;
+   min-width: max-content;
+   box-shadow: 3px 3px 3px black;
+   font-weight: bold;
+   font-size: large;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   background-image: linear-gradient(45deg,$text-color,$text-color ,$bg-color);
 
  }

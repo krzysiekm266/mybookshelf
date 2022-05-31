@@ -1,3 +1,4 @@
+import { Book, BOOKS } from './../../models/book';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./books-list.component.scss']
 })
 export class BooksListComponent implements OnInit {
-
+  books:Book[] = [];
   constructor() { }
 
   ngOnInit(): void {
+    this.books = BOOKS;
   }
 
 }

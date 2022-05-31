@@ -54,3 +54,22 @@ form {
 
 
 }
+@media screen and (min-width:600px){
+  .search {
+
+    width: 100%;
+    height: auto;
+    //background-color: aliceblue;
+
+  }
+  form {
+    width: auto;
+  }
+  .form-row {
+    width: auto;
+    input {
+      width: auto;
+      min-width:150px ;
+    }
+  }
+}

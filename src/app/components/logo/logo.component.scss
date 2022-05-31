@@ -5,9 +5,18 @@
 }
 
 .logo {
+  align-items: center;
+  justify-content: space-between;
   width: 100vw;
-  height: 15vh;
-  min-height: 15vh;
-  background-color: black;
+  height: auto;
+  min-height: 10vh;
+  background-color: $bg-color;
 
+}
+.logo-icon {
+  margin-left: 16px;
+  color: $text-color;
+  &:hover {
+    color: $hover-color;
+  }
 }

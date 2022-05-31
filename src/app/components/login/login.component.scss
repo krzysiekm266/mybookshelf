@@ -1,0 +1,49 @@
+@import "../../../variables.scss";
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  //background-color: aqua;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  overflow: auto;
+}
+
+form {
+  width: 80vw;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 8px;
+  input {
+
+    padding: 4px;
+    margin-bottom: 8px;
+  }
+}
+button {
+  height: 30px;
+}
+
+
+.page-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 8px;
+  border: 2px solid black;
+  margin: 8px 0;
+  width: 10vw;
+  min-width: max-content;
+  box-shadow: 3px 3px 3px black;
+  font-weight: bold;
+  font-size: large;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-image: linear-gradient(45deg, $text-color, $text-color, $bg-color);
+
+}

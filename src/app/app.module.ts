@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -15,6 +16,10 @@ import { SearchComponent } from './components/search/search.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { AboutComponent } from './components/about/about.component';
+import { ErrorComponent } from './components/error/error.component';
 
 
 
@@ -29,14 +34,18 @@ import { SocialMediaComponent } from './components/social-media/social-media.com
     FooterComponent,
     SearchComponent,
     LogoComponent,
-    SocialMediaComponent
+    SocialMediaComponent,
+    LoginComponent,
+    RegisterComponent,
+    AboutComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   providers: [FormBuilder],
   bootstrap: [AppComponent]
