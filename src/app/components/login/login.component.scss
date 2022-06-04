@@ -44,6 +44,13 @@ button {
   font-size: large;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background-image: linear-gradient(45deg, $text-color, $text-color, $bg-color);
+  background-image: linear-gradient(45deg,$hover-color,$text-color ,$bg-color);
+
+}
+
+@media screen and (min-width:600px) {
+  .page-title {
+    display: none;
+  }
 
 }

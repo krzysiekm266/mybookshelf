@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {
   faFacebook,
   faTwitter,
@@ -14,6 +14,8 @@ export class SocialMediaComponent implements OnInit {
   faFacebook = faFacebook;
   faTwitter = faTwitter;
   faInstagram = faInstagram;
+ @Input() bigIcons: boolean = false;
+
   constructor() {}
 
   ngOnInit(): void {}

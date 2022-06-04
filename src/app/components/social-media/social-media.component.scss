@@ -3,22 +3,35 @@
 * {
   display: flex;
 }
+h1 {
+  display: none;
+}
+fa-icon {
+  color: $text-color;
+  padding: 4px;
+  size: 20px;
 
+  &:hover {
+    color: $hover-color;
+  }
+}
 .social-media {
+  flex-direction: row;
+
   margin-right: 16px;
   gap: 8px;
  // background-color: aqua;
 }
+.icons {
+  padding: 4px;
 
-fa-icon {
-  color: white;
-
-  &:hover {
-    color: red;
-  }
 }
+
+
 @media screen and (min-width:600px){
-  fa-icon {
-    size: '4x';
+  h1 {
+    display: flex;
+    color: $text-color;
   }
+
 }
