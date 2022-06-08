@@ -1,6 +1,7 @@
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 
@@ -46,6 +47,8 @@ import { ErrorComponent } from './components/error/error.component';
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
+    BrowserAnimationsModule,
+
   ],
   providers: [FormBuilder],
   bootstrap: [AppComponent]

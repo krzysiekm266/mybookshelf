@@ -46,6 +46,11 @@
 }
 
 .tech-info-right {
+  a {
+
+    border-style: none;
+  }
+
   fa-icon {
     margin: 4px;
     padding: 4px;
@@ -56,6 +61,7 @@
     &:hover {
       color: $hover-color;
     }
+
   }
 
 }

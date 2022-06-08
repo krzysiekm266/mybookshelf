@@ -1,4 +1,4 @@
-<div class="bookshelf">
+<div class="bookshelf"  >
   <div class="logo">
     <app-logo></app-logo>
   </div>
@@ -7,8 +7,8 @@
     <app-search></app-search>
   </div>
 
-  <div class="content">
-    <router-outlet></router-outlet>
+  <div class="content"   [@routeAnimations]="prepareRoute(bookshelfOutlet)" >
+    <router-outlet #bookshelfOutlet="outlet" ></router-outlet>
   </div>
   <app-footer [menu]="menu"></app-footer>
 </div>

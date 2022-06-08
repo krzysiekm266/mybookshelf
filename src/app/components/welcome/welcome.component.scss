@@ -71,6 +71,7 @@ span {
 @media screen and (min-width:600px) {
   .welcome {
     position: relative;
+    mix-blend-mode: hard-light;
   }
 
   h1 {

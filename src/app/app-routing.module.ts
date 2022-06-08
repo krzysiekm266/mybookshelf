@@ -11,12 +11,12 @@ const routes: Routes = [
 
   {
     path: 'bookshelf',
-    component: BookshelfComponent,
+    component: BookshelfComponent,data:{animation:'slideInRightAnimation'},
     children: [
-      { path: 'books', component: BooksListComponent },
-      {path: 'register',component:RegisterComponent },
-      {path:'login',component:LoginComponent},
-      {path:'about',component:AboutComponent},
+      { path: 'books', component: BooksListComponent ,data:{animation:'booksAnimation'}},
+      {path: 'register',component:RegisterComponent,data:{animation:'registerAnimation'}},
+      {path:'login',component:LoginComponent,data:{animation:'loginAnimation'}},
+      {path:'about',component:AboutComponent ,data:{animation:'aboutAnimation'}},
       { path:'',redirectTo:'books',pathMatch:'full'}
     ],
   },

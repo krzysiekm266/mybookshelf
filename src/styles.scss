@@ -11,5 +11,12 @@ html,body {
   height: 100vh;
 
 }
+body {
+  background-image: url('assets/bg/puzzle.jpg');
+  background-size: cover;
+  background-color: $bg-color;
+ // mix-blend-mode: hard-light;
+
+}
 
 
