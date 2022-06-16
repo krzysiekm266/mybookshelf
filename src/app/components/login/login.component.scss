@@ -49,8 +49,13 @@ button {
 }
 
 @media screen and (min-width:600px) {
+
+  form {
+    width: 60vw;
+  }
   .page-title {
     display: none;
   }
+
 
 }

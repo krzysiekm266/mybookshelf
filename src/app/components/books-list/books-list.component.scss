@@ -58,6 +58,9 @@ td.title {
   background-image: linear-gradient(45deg, $hover-color, $text-color, $bg-color);
 }
 
+tr.title-row:hover {
+  background-color: lighten($hover-color, 10%);
+}
 @media screen and (min-width:600px) {
   .page-title {
     display: none;
