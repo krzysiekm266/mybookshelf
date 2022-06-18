@@ -13,15 +13,10 @@
   </div>
   <div class="errors">
     <app-error [errors]="loginForm.get('email')?.hasError('required') || loginForm.get('email')?.hasError('email')"
-<<<<<<< HEAD
       msg="Email is incorrect!" msgValidated="Email OK">
     </app-error>
     <app-error [errors]="loginForm.get('password')?.hasError('required')" msg="Password required!"  msgValidated="Password OK">
     </app-error>
-=======
-      msg="Email is incorrect!" msgValidated="Email correct."></app-error>
-    <app-error [errors]="loginForm.get('password')?.hasError('required')" msg="Password required!" msgValidated="Password OK"></app-error>
->>>>>>> 121d37ab8debd436f8967a9c8d28c785f55787ee
   </div>
 
 </div>
