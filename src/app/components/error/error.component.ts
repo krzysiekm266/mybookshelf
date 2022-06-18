@@ -14,10 +14,6 @@ export class ErrorComponent implements OnInit {
   faCircleCheck = faCircleCheck;
   @Input() msg: string = '';
   @Input() msgValidated: string = '';
-<<<<<<< HEAD
-=======
-
->>>>>>> 121d37ab8debd436f8967a9c8d28c785f55787ee
   @Input() errors: boolean | undefined = true;
   constructor() {}
 
