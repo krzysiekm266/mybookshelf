@@ -13,7 +13,7 @@ export class ErrorComponent implements OnInit {
   faCircleXmark = faCircleXmark;
   faCircleCheck = faCircleCheck;
   @Input() msg: string = '';
-
+  @Input() msgValidated: string = '';
   @Input() errors: boolean | undefined = true;
   constructor() {}
 

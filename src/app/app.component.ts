@@ -1,5 +1,5 @@
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
-import { slideInRightAnimation,slideInLeftAnimation } from 'src/app/animations/animations';
+import { slideInBottomAnimation,slideInLeftAnimation } from 'src/app/animations/animations';
 import { Component, Output } from '@angular/core';
 
 
@@ -7,7 +7,7 @@ import { Component, Output } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations:[slideInRightAnimation]
+  animations:[slideInBottomAnimation]
 
 })
 export class AppComponent {

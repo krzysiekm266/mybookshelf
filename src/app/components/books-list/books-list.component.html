@@ -8,12 +8,11 @@
    </tr>
    <tr *ngFor="let book of books">
      <td class="title">
-      <button>details</button>
+
        {{ book.title }}
      </td>
      <td>
-       <button>delete</button>
-       <button>edit</button>
+      <a [routerLink]="'/bookshelf/book-details'">details </a>
      </td>
    </tr>
  </table>

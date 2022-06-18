@@ -1,8 +1,10 @@
 @import '../../../variables.scss';
-* {
-  display: flex;
-}
 
+.book {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+}
 @media screen and (min-width:600px) {
   .page-title {
     display: none;

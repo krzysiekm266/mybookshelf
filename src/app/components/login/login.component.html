@@ -1,6 +1,6 @@
 <div class="login">
   <span class="page-title">Login</span>
-  <div>
+  <div class="content">
     <form (ngSubmit)="login()" [formGroup]="loginForm">
       <label for="email">Email: </label>
       <input type="email" name="email" formControlName="email" id="email">
@@ -13,8 +13,10 @@
   </div>
   <div class="errors">
     <app-error [errors]="loginForm.get('email')?.hasError('required') || loginForm.get('email')?.hasError('email')"
-      msg="Email is incorrect!"></app-error>
-    <app-error [errors]="loginForm.get('password')?.hasError('required')" msg="Password required!"></app-error>
+      msg="Email is incorrect!" msgValidated="Email OK">
+    </app-error>
+    <app-error [errors]="loginForm.get('password')?.hasError('required')" msg="Password required!"  msgValidated="Password OK">
+    </app-error>
   </div>
 
 </div>

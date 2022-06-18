@@ -20,6 +20,7 @@ export const slideInLeftAnimation = trigger('routeAnimations', [
       style({
         position: 'absolute',
         width: '100%',
+        height: '100%',
         left: '-100%',
       }),
       animate(
@@ -32,18 +33,21 @@ export const slideInLeftAnimation = trigger('routeAnimations', [
   ]),
 ]);
 
-export const slideInRightAnimation = trigger('routeAnimations', [
+export const slideInBottomAnimation = trigger('routeAnimations', [
   transition('*<=>*', [
     query(':enter', [
       style({
         position: 'absolute',
         width: '100%',
-        right: '-100%',
+        height:'100%',
+        // right: '-100%',
+        bottom:'-100%',
       }),
       animate(
         '400ms ease-in',
         style({
-          right: 0,
+          // right: 0,
+          bottom:0,
         })
       ),
     ],{optional:true}),

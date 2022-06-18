@@ -4,10 +4,10 @@
   </div>
   <app-navigation [menu]="menu"></app-navigation>
   <div class="search">
-    <app-search></app-search>
+    <app-search ></app-search>
   </div>
 
-  <div class="content"   [@routeAnimations]="prepareRoute(bookshelfOutlet)" >
+  <div class="content" [@routeAnimations]="prepareRoute(bookshelfOutlet)" >
     <router-outlet #bookshelfOutlet="outlet" ></router-outlet>
   </div>
   <app-footer [menu]="menu"></app-footer>
