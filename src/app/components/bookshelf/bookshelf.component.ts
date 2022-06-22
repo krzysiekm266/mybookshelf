@@ -1,3 +1,4 @@
+import { UserService } from './../../services/user.service';
 import { Component, OnInit, Output ,ViewEncapsulation} from '@angular/core';
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
 import { slideInBottomAnimation ,slideInLeftAnimation} from 'src/app/animations/animations';
@@ -12,8 +13,9 @@ import { slideInBottomAnimation ,slideInLeftAnimation} from 'src/app/animations/
 export class BookshelfComponent implements OnInit {
 
   @Output() menu:string[] = [];
+  @Output() userName:string = '';
 
-  constructor() { }
+  constructor(private _userService:UserService) { }
 
   prepareRoute(outlet:RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];

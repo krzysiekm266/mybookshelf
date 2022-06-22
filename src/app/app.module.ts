@@ -1,3 +1,5 @@
+import { UserService } from './services/user.service';
+
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -50,7 +52,7 @@ import { ErrorComponent } from './components/error/error.component';
     BrowserAnimationsModule,
 
   ],
-  providers: [FormBuilder],
+  providers: [FormBuilder,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
