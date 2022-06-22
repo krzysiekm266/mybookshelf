@@ -3,20 +3,24 @@
   <div class="content">
     <form (ngSubmit)="login()" [formGroup]="loginForm">
       <label for="email">Email: </label>
-      <input type="email" name="email" formControlName="email" id="email">
+      <input type="email" name="email" formControlName="email" id="email" (input)="clearLoginFailMsg()">
       <label for="password">Password: </label>
-      <input type="password" name="password" formControlName="password" id="password">
+      <input type="password" name="password" formControlName="password" id="password" (input)="clearLoginFailMsg()">
       <button type="submit" [disabled]="!loginForm.valid">
         Login
       </button>
     </form>
   </div>
   <div class="errors">
-    <app-error [errors]="loginForm.get('email')?.hasError('required') || loginForm.get('email')?.hasError('email')"
-      msg="Email is incorrect!" msgValidated="Email OK">
-    </app-error>
-    <app-error [errors]="loginForm.get('password')?.hasError('required')" msg="Password required!"  msgValidated="Password OK">
-    </app-error>
+    <div>
+      <app-error [errors]="loginForm.get('email')?.hasError('required') || loginForm.get('email')?.hasError('email')"
+        msg="Email is incorrect!" msgValidated="Email OK">
+      </app-error>
+      <app-error [errors]="loginForm.get('password')?.hasError('required')" msg="Password required!"
+        msgValidated="Password OK">
+      </app-error>
+    </div>
+    <p *ngIf="checkLoginAttemp()">Login attemp fail! Check your login  data and try again.</p>
   </div>
 
 </div>

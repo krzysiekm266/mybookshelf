@@ -1,6 +1,8 @@
+import { Router } from '@angular/router';
 import { UserService } from './../../services/user.service';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { faLess } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +11,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   loginForm!:FormGroup;
-  constructor(private _fb:FormBuilder,private _userService:UserService) { }
+  private _loginFail:boolean = false;
+  constructor(private _fb:FormBuilder,private _userService:UserService,private _router:Router) { }
 
   ngOnInit(): void {
     this.loginForm = this._fb.group({
@@ -20,9 +23,29 @@ export class LoginComponent implements OnInit {
 
   }
   login():boolean {
-    return this._userService.login(
+    let login:boolean = this._userService.login(
       this.loginForm.get('email')?.value as string,
       this.loginForm.get('password')?.value as string,
     );
+
+    if(login) {
+      this.loginForm.get('email')?.setValue('');
+      this.loginForm.get('password')?.setValue('');
+      this._router.navigate(['/','bookshelf','books']);
+      return true;
+    }
+    else {
+      this._loginFail = true;
+      return false;
+    }
+
+  }
+
+  checkLoginAttemp() {
+    return this._loginFail;
+  }
+
+  clearLoginFailMsg() {
+    this._loginFail = false;
   }
 }

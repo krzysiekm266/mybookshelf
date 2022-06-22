@@ -14,7 +14,7 @@
   <h1>Bookshelf</h1>
   <div class="menu">
     <a *ngFor="let item of menu" [routerLink]="item" [routerLinkActive]="'active'">{{ item }} </a>
-    <a *ngIf="!isUserLogin()" [routerLink]="'login'" (click)="closeMenu()">Login </a>
+    <a *ngIf="!isUserLogin()" [routerLink]="'login'" [routerLinkActive]="'active'" (click)="closeMenu()">Login </a>
     <a *ngIf="isUserLogin()" (click)="logout()">Logout </a>
   </div>
   <div class="social-media">
