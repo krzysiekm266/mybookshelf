@@ -28,6 +28,7 @@ a {
   font-size: larger;
   color: $text-color;
   background-color: $bg-color;
+  cursor: pointer;
   &:hover {
     color: $hover-color;
   }

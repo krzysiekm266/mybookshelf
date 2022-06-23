@@ -1,19 +1,20 @@
-<div class="books-list" >
+<div class="books-list">
   <span class="page-title">Books</span>
- <table>
-   <tr class="header">
-
-     <th>Title</th>
-     <th>Menu</th>
-   </tr>
-   <tr *ngFor="let book of books" class="title-row">
-     <td class="title">
-
-       {{ book.title }}
-     </td>
-     <td>
-      <a [routerLink]="'/bookshelf/book-details'">details </a>
-     </td>
-   </tr>
- </table>
+  <div class="books-table">
+    <span>Books table</span>
+    <table>
+      <tr class="header">
+        <th>Title</th>
+        <th>Menu</th>
+      </tr>
+      <tr *ngFor="let book of books" class="title-row">
+        <td class="title">
+          {{ book.title }}
+        </td>
+        <td>
+          <a [routerLink]="'/bookshelf/book-details'">details </a>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>

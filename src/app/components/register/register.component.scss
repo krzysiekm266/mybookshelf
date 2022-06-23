@@ -31,6 +31,31 @@
 
 }
 
+.register-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+
+  width: 80%;
+  min-height: 20%;
+  background-color: rgba(240, 248, 255, 0.89);
+}
+
+span:not(.page-title) {
+  position: absolute;
+  text-align: center;
+  width:100px;
+  top: 0;
+  left: 0;
+  padding: 8px;
+  font-weight: bold;
+  text-transform: capitalize;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
 @media screen and (min-width:600px) {
   .page-title {
     display: none;

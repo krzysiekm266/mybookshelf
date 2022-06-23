@@ -13,6 +13,32 @@
 
 }
 
+.books-table {
+
+  width: 100%;
+  padding: 8px;
+  padding-top: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  background-color: rgba(240, 248, 255, 0.89);
+}
+
+span:not(.page-title) {
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  top: 0;
+  left: 0;
+  padding: 8px;
+  font-weight: bold;
+  text-transform: capitalize;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
 table,
 th,
 td {
@@ -24,16 +50,16 @@ td {
   text-align: center;
 
 }
+
 tr:hover {
   background-color: lighten($hover-color, 10%);
 }
+
 tr td:last-child {
-width: 25%;
+  width: 25%;
   padding: 0;
-
-
-
 }
+
 table {
   width: 100%;
   background-color: $bg-table-books;
@@ -70,6 +96,7 @@ td.title {
 tr.title-row:hover {
   background-color: lighten($hover-color, 10%);
 }
+
 @media screen and (min-width:600px) {
   .page-title {
     display: none;
@@ -78,7 +105,7 @@ tr.title-row:hover {
   .books-list {
     width: 80%;
     margin: auto;
-   // background-color: aqua;
+    // background-color: aqua;
   }
 }
 
@@ -86,6 +113,6 @@ tr.title-row:hover {
   .books-list {
     width: 65%;
     margin: auto;
-   // background-color: aqua;
+    // background-color: aqua;
   }
 }
