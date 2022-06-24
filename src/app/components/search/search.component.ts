@@ -9,15 +9,15 @@ import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
 
 })
 export class SearchComponent implements OnInit {
-
+  @Input() show:boolean = false;
   searchForm!: FormGroup;
   constructor(private _fb: FormBuilder,private route:ActivatedRoute) {}
-
   ngOnInit(): void {
     this.searchForm = this._fb.group({
       search: ['', Validators.min(3)],
     });
-
+    //do poprawy
+    this.show = (this.route.snapshot.url.find(segment => segment.path == 'books'))? true : false;
   }
   search() {}
 }

@@ -17,7 +17,7 @@
         msg="Email is incorrect!" msgValidated="Email OK">
       </app-error>
       <app-error [errors]="loginForm.get('password')?.hasError('required')" msg="Password required!"
-        msgValidated="Password OK">
+        msgValidated="Password required.">
       </app-error>
     </div>
     <p *ngIf="checkLoginAttemp()">Login attemp fail! Check your login  data and try again.</p>
