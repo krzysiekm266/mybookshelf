@@ -1,95 +1,98 @@
 @import "../../../variables.scss";
 
- .about {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: flex-start;
-   //background-color: aqua;
-   width: 100%;
-   height: 100%;
-   padding: 8px;
-   gap:8px;
- }
+.about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	//background-color: aqua;
+	width: 100%;
+	height: 100%;
+	padding: 8px;
+	gap: 8px;
+}
 
- .page-title {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  align-self: flex-start;
-  padding: 8px;
-  border: 2px solid black;
-  margin:8px 0;
-  width:10vw;
-  min-width: max-content;
-  box-shadow: 3px 3px 3px black;
-  font-weight: bold;
-  font-size: large;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  background-image: linear-gradient(45deg,$hover-color,$text-color ,$bg-color);
+.page-title {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	align-self: flex-start;
+	padding: 8px;
+	border: 2px solid black;
+	margin: 8px 0;
+	width: 10vw;
+	min-width: max-content;
+	box-shadow: 3px 3px 3px black;
+	font-weight: bold;
+	font-size: large;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background-image: linear-gradient(45deg, $hover-color, $text-color , $bg-color);
 
 }
 
 
 .info {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid black;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid black;
 
-  width: 100%;
-  min-height: 20%;
-  background-color: rgba(240, 248, 255, 0.89);
+	width: 100%;
+	min-height: 20%;
+	background-color: rgba(240, 248, 255, 0.89);
 }
 
 .sources {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid black;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid black;
 
-  width: 100%;
-  min-height: 50%;
-  background-color: rgba(240, 248, 255, 0.89);
+	width: 100%;
+	min-height: 50%;
+	background-color: rgba(240, 248, 255, 0.89);
 }
 
 span:not(.page-title) {
-  position: absolute;
-  text-align: center;
-  width:100px;
-  top: 0;
-  left: 0;
-  padding: 8px;
-  font-weight: bold;
-  text-transform: capitalize;
-  background-color: $bg-color;
-  color: $text-color;
+	position: absolute;
+	text-align: center;
+	width: 100px;
+	top: 0;
+	left: 0;
+	padding: 8px;
+	font-weight: bold;
+	text-transform: capitalize;
+	background-color: $bg-color;
+	color: $text-color;
 }
 
 @media screen and (min-width:600px) {
-  .page-title {
-    display: none;
-  }
-  .info {
-    width: 80%;
+	.page-title {
+		display: none;
+	}
 
-  }
-  .sources {
-    width: 80%;
-  }
+	.info {
+		width: 80%;
+
+	}
+
+	.sources {
+		width: 80%;
+	}
 
 }
 
 @media screen and (min-width:850px) {
-  .info {
-    width: 60%;
+	.info {
+		width: 60%;
 
-  }
-  .sources {
-    width: 60%;
-  }
+	}
+
+	.sources {
+		width: 60%;
+	}
 }

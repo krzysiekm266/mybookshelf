@@ -169,10 +169,48 @@ span {
     justify-content: center;
     width: 100%;
   }
-  // .search {
-  //   display: flex;
+  .user-menu {
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 65px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 
-  // }
+  }
+  .user-name {
+    position: relative;
+    color: rgb(53, 202, 7);
+    font-weight: bold;
+    text-transform: none;
+
+    &:hover {
+      color: rgb(53, 202, 7);
+      .toggle-icon {
+        color: $hover-color;
+      }
+    }
+
+  }
+  .user-icon {
+    margin:20px;
+    color: $text-color;
+  }
+  .toggle-icon {
+    margin: 20px;
+    color: $text-color;
+  }
+  .transform180 {
+    transform: rotate(180deg);
+  }
+  .logout-link {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: medium;
+  }
   .logo {
     display: flex;
     align-items: center;

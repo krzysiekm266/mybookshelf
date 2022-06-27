@@ -1,7 +1,7 @@
 import { UserService } from './../../services/user.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faXmark,faAnglesDown,faFaceSmile } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navigation',
@@ -10,8 +10,11 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 })
 export class NavigationComponent implements OnInit {
   faXmark = faXmark;
+  faAnglesDown = faAnglesDown;
+  faFaceSmile = faFaceSmile;
   @Input() menu: string[] = [];
   @Input() open: boolean = false;
+  @Input() userMenu:boolean = false;
   constructor(private _router:Router,private _userService:UserService) {}
 
   ngOnInit(): void {}
@@ -19,13 +22,16 @@ export class NavigationComponent implements OnInit {
   openMenu() {
     this.open = true;
   }
-
+  toggleUserMenu() {
+    this.userMenu = !this.userMenu;
+  }
   closeMenu() {
     this.open = false;
   }
 
   logout() {
     this.open = false;
+    this.userMenu = false;
     this._userService.logout();
     this._router.navigate(['/','bookshelf','login']);
 
@@ -35,6 +41,6 @@ export class NavigationComponent implements OnInit {
    return localStorage.getItem('token') ? true : false ;
   }
   getUserLogin():string {
-    return this._userService.getUserName();
+    return  this.isUserLogin() ? this._userService.getUserName() : '';
   }
 }
