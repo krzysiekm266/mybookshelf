@@ -23,6 +23,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AboutComponent } from './components/about/about.component';
 import { ErrorComponent } from './components/error/error.component';
+import { CanActivateBooksDetailsGuard } from './guars/can-activate-books-details.guard';
 
 
 
@@ -52,7 +53,7 @@ import { ErrorComponent } from './components/error/error.component';
     BrowserAnimationsModule,
 
   ],
-  providers: [FormBuilder,UserService],
+  providers: [FormBuilder,UserService,CanActivateBooksDetailsGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
 import { UserService } from './../../services/user.service';
-import { Component, OnInit, Output ,ViewEncapsulation} from '@angular/core';
-import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
+import { Component, Input, OnInit, OnChanges} from '@angular/core';
+import { ChildrenOutletContexts, Router, RouterOutlet } from '@angular/router';
 import { slideInBottomAnimation ,slideInLeftAnimation} from 'src/app/animations/animations';
 
 @Component({
@@ -12,10 +12,12 @@ import { slideInBottomAnimation ,slideInLeftAnimation} from 'src/app/animations/
 })
 export class BookshelfComponent implements OnInit {
 
-  @Output() menu:string[] = [];
-  @Output() userName:string = '';
+   menu:string[] = [];
+  @Input() userName!:string;
 
-  constructor(private _userService:UserService) { }
+  constructor(private _userService:UserService, private _router:Router) {
+
+  }
 
   prepareRoute(outlet:RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
@@ -27,5 +29,21 @@ export class BookshelfComponent implements OnInit {
       'books','about','register',
     ];
   }
+  // ngOnChanges():void {
+  //   this.userName = this._userService.getUserName();
+  // }
+  userLogin():boolean {
 
+    return  this._userService.loginStatus();
+  }
+  login():string {
+    this.userName = this._userService.getUserName();
+    return this.userName;
+  }
+  logout() {
+    this.userName = '';
+    this._userService.logout();
+    this._router.navigate(['/','bookshelf','login']);
+
+  }
 }

@@ -8,7 +8,7 @@
   <div class="hamburger-menu" *ngIf="open">
     <a *ngFor="let item of menu" [routerLink]="item" (click)="closeMenu()">{{ item }} </a>
     <a [routerLink]="'login'" (click)="closeMenu()">Login </a>
-    <a (click)="logout()">Logout </a>
+    <!-- <a (click)="logout()">Logout </a>  -->
     <fa-icon class="close-button" [icon]="faXmark" size="3x" (click)="closeMenu()"></fa-icon>
   </div>
   <h1>Bookshelf</h1>
@@ -16,7 +16,7 @@
     <a *ngFor="let item of menu" [routerLink]="item" [routerLinkActive]="'active'">{{ item }} </a>
     <a *ngIf="!isUserLogin()" [routerLink]="'login'" [routerLinkActive]="'active'" (click)="closeMenu()">Login </a>
     <a *ngIf="isUserLogin()" (click)="toggleUserMenu()" class="user-name">
-      <fa-icon class="user-icon" [icon]="faFaceSmile" size="2x" ></fa-icon>
+      <fa-icon class="user-icon" [icon]="faFaceSmile" size="1x" ></fa-icon>
       {{ getUserLogin() }}
       <fa-icon class="toggle-icon" [class.transform180]="userMenu" [icon]="faAnglesDown" size="lg" ></fa-icon>
       <div *ngIf="userMenu" class="user-menu">
@@ -30,5 +30,6 @@
   <div class="search">
     <app-search></app-search>
   </div>
+
 </nav>
 

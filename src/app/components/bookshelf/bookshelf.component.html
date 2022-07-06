@@ -6,7 +6,10 @@
   <div class="mobile-search">
     <app-search ></app-search>
   </div>
-
+  <div class="mobile-auth" *ngIf="userLogin()">
+    <p class="user">{{ login() }} </p>
+    <a class="mobile-logout-link" (click)="logout()">Logout</a>
+  </div>
   <div class="content" [@routeAnimations]="prepareRoute(bookshelfOutlet)" >
     <router-outlet #bookshelfOutlet="outlet" ></router-outlet>
   </div>

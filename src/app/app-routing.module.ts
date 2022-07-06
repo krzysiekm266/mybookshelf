@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BooksListComponent } from './components/books-list/books-list.component';
 import { BookshelfComponent } from './components/bookshelf/bookshelf.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { CanActivateBooksDetailsGuard } from './guars/can-activate-books-details.guard';
 
 const routes: Routes = [
   {
@@ -18,9 +19,10 @@ const routes: Routes = [
         path: 'books',
         component: BooksListComponent,
         data: { animation: 'booksAnimation' },
+        canActivate: [ CanActivateBooksDetailsGuard ]
       },
       {
-        path: 'book-details',
+        path: 'book-details/:book',
         component: BookComponent,
         data: { animation: 'detailsAnimation' }
       },

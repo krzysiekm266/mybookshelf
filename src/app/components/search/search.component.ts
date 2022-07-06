@@ -17,7 +17,7 @@ export class SearchComponent implements OnInit {
       search: ['', Validators.min(3)],
     });
     //do poprawy
-    this.show = (this.route.snapshot.url.find(segment => segment.path == 'books'))? true : false;
+    this.show = true;
   }
   search() {}
 }

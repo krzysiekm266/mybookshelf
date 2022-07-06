@@ -1,7 +1,8 @@
-import { ChildrenOutletContexts } from '@angular/router';
-import { slideInLeftAnimation } from 'src/app/animations/animations';
 import { Book, BOOKS } from './../../models/book';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
+
 
 @Component({
   selector: 'app-books-list',
@@ -13,7 +14,7 @@ import { Component, OnInit } from '@angular/core';
 export class BooksListComponent implements OnInit {
   books:Book[] = [];
   //constructor(private contexts: ChildrenOutletContexts) { }
-  constructor() { }
+  constructor( ) { }
 
   // getRouteAnimationData() {
   //   return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
@@ -21,5 +22,6 @@ export class BooksListComponent implements OnInit {
   ngOnInit(): void {
     this.books = BOOKS;
   }
+
 
 }
