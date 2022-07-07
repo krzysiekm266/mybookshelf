@@ -14,33 +14,45 @@ const routes: Routes = [
     path: 'bookshelf',
     component: BookshelfComponent,
     data: { animation: 'slideInRightAnimation' },
+
+
     children: [
       {
         path: 'books',
         component: BooksListComponent,
         data: { animation: 'booksAnimation' },
-        canActivate: [ CanActivateBooksDetailsGuard ]
-      },
-      {
-        path: 'book-details/:book',
-        component: BookComponent,
-        data: { animation: 'detailsAnimation' }
+        canActivate: [ CanActivateBooksDetailsGuard ],
+        children: [
+          {
+            path: 'book-details',
+            component: BookComponent,
+            data: { animation: 'detailsAnimation' },
+
+            canActivate: [ CanActivateBooksDetailsGuard ]
+          },
+        ]
       },
       {
         path: 'register',
         component: RegisterComponent,
         data: { animation: 'registerAnimation' },
+
+
       },
       {
         path: 'login',
         component: LoginComponent,
         data: { animation: 'loginAnimation' },
+
       },
       {
         path: 'about',
         component: AboutComponent,
         data: { animation: 'aboutAnimation' },
+
+
       },
+
       { path: '', redirectTo: 'books', pathMatch: 'full' },
     ],
   },

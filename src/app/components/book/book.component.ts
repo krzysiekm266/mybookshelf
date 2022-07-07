@@ -1,5 +1,6 @@
-import { ChildrenOutletContexts } from '@angular/router';
+import { ActivatedRoute, ChildrenOutletContexts } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { Book } from 'src/app/models/book';
 
 @Component({
   selector: 'app-book',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book.component.scss']
 })
 export class BookComponent implements OnInit {
-
-  constructor() { }
+  book!:Book;
+  constructor(private route:ActivatedRoute) {
+    this.route.params.subscribe(params => {  this.book =  params['book'] } );
+  }
 
 
   ngOnInit(): void {
