@@ -24,6 +24,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { AboutComponent } from './components/about/about.component';
 import { ErrorComponent } from './components/error/error.component';
 import { CanActivateBooksDetailsGuard } from './guars/can-activate-books-details.guard';
+import { BooksService } from './services/books.service';
 
 
 
@@ -45,15 +46,15 @@ import { CanActivateBooksDetailsGuard } from './guars/can-activate-books-details
     ErrorComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
+
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-
+    BrowserModule,
+    AppRoutingModule,
   ],
-  providers: [FormBuilder,UserService,CanActivateBooksDetailsGuard],
+  providers: [FormBuilder,UserService,BooksService,CanActivateBooksDetailsGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

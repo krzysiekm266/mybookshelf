@@ -12,6 +12,8 @@
   </div>
   <div class="content" [@routeAnimations]="prepareRoute(bookshelfOutlet)" >
     <router-outlet #bookshelfOutlet="outlet" ></router-outlet>
+    <router-outlet  name="bookshelf"></router-outlet>
+
   </div>
   <app-footer [menu]="menu"></app-footer>
 </div>

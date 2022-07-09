@@ -11,15 +11,16 @@ export class UserService {
   constructor() {
     localStorage.removeItem('token')
     this._user = {
-      name: 'quest',
-      email: 'quest@quest.mail',
-      password: 'quest',
-      token: 'quest-token',
+      name: 'guest',
+      email: 'guest@guest.mail',
+      password: 'guest',
+      token: 'guest-token',
     };
   }
 
   loginStatus(): boolean {
-    return this._loginSucess == undefined ? false : this._loginSucess;
+    // return this._loginSucess == undefined ? false : this._loginSucess;
+    return this._loginSucess;
   }
 
   getUserName(): string {

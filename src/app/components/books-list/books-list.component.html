@@ -12,7 +12,7 @@
           {{ book.title }}
         </td>
         <td>
-          <a [routerLink]="['book-details']">details </a>
+          <a [routerLink]="['../book-details',book.id]">details </a>
         </td>
       </tr>
     </table>

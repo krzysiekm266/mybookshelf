@@ -6,14 +6,14 @@
     <span></span>
   </div>
   <div class="hamburger-menu" *ngIf="open">
-    <a *ngFor="let item of menu" [routerLink]="item" (click)="closeMenu()">{{ item }} </a>
+    <a *ngFor="let item of menu" [routerLink]="[item]" (click)="closeMenu()">{{ item }} </a>
     <a [routerLink]="'login'" (click)="closeMenu()">Login </a>
     <!-- <a (click)="logout()">Logout </a>  -->
     <fa-icon class="close-button" [icon]="faXmark" size="3x" (click)="closeMenu()"></fa-icon>
   </div>
   <h1>Bookshelf</h1>
   <div class="menu">
-    <a *ngFor="let item of menu" [routerLink]="item" [routerLinkActive]="'active'">{{ item }} </a>
+    <a *ngFor="let item of menu" [routerLink]="[item]" [routerLinkActive]="'active'">{{ item }} </a>
     <a *ngIf="!isUserLogin()" [routerLink]="'login'" [routerLinkActive]="'active'" (click)="closeMenu()">Login </a>
     <a *ngIf="isUserLogin()" (click)="toggleUserMenu()" class="user-name">
       <fa-icon class="user-icon" [icon]="faFaceSmile" size="1x" ></fa-icon>

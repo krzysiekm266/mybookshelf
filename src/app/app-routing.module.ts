@@ -14,42 +14,40 @@ const routes: Routes = [
     path: 'bookshelf',
     component: BookshelfComponent,
     data: { animation: 'slideInRightAnimation' },
-
-
     children: [
       {
         path: 'books',
         component: BooksListComponent,
         data: { animation: 'booksAnimation' },
         canActivate: [ CanActivateBooksDetailsGuard ],
-        children: [
-          {
-            path: 'book-details',
-            component: BookComponent,
-            data: { animation: 'detailsAnimation' },
 
-            canActivate: [ CanActivateBooksDetailsGuard ]
-          },
-        ]
+      },
+      {
+        path: 'book-details/:id',
+        component: BookComponent,
+        data: { animation: 'detailsAnimation' },
+        //pathMatch: 'full',
+       // outlet: 'bookshelf',
+        canActivate: [ CanActivateBooksDetailsGuard ]
       },
       {
         path: 'register',
         component: RegisterComponent,
         data: { animation: 'registerAnimation' },
-
+        //outlet: 'bookshelf',
 
       },
       {
         path: 'login',
         component: LoginComponent,
         data: { animation: 'loginAnimation' },
-
+        //outlet: 'bookshelf',
       },
       {
         path: 'about',
         component: AboutComponent,
         data: { animation: 'aboutAnimation' },
-
+        //outlet: 'bookshelf',
 
       },
 
@@ -57,7 +55,7 @@ const routes: Routes = [
     ],
   },
   { path: 'welcome', component: WelcomeComponent },
-  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+  { path: '', redirectTo: '/welcome', pathMatch: 'full' },
 ];
 
 @NgModule({
