@@ -2,6 +2,7 @@ import { Book, BOOKS } from './../../models/book';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
+import { BooksService } from 'src/app/services/books.service';
 
 
 @Component({
@@ -13,14 +14,10 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class BooksListComponent implements OnInit {
   books:Book[] = [];
-  //constructor(private contexts: ChildrenOutletContexts) { }
-  constructor( ) { }
+  constructor( private _booksService:BooksService) { }
 
-  // getRouteAnimationData() {
-  //   return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
-  // }
   ngOnInit(): void {
-    this.books = BOOKS;
+    this._booksService.getBooks().subscribe(books => this.books = books);
   }
 
 
