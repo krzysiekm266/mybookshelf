@@ -1,8 +1,7 @@
 import { Book, BOOKS } from './../../models/book';
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { UserService } from 'src/app/services/user.service';
+import { Component, Input, OnInit } from '@angular/core';
 import { BooksService } from 'src/app/services/books.service';
+import { Observable,of,map } from 'rxjs';
 
 
 @Component({
@@ -13,11 +12,18 @@ import { BooksService } from 'src/app/services/books.service';
 
 })
 export class BooksListComponent implements OnInit {
-  books:Book[] = [];
-  constructor( private _booksService:BooksService) { }
+  @Input() books:Book[] = [];
+
+
+  constructor( private _booksService:BooksService) {
+
+   }
 
   ngOnInit(): void {
+
     this._booksService.getBooks().subscribe(books => this.books = books);
+
+
   }
 
 

@@ -1,7 +1,7 @@
 import { newArray } from '@angular/compiler/src/util';
 import { Injectable } from '@angular/core';
 import { observable, Observable,of ,} from 'rxjs';
-import { filter,find ,map} from "rxjs/operators";
+import { filter,find ,map, tap} from "rxjs/operators";
 
 import { Book,BOOKS, } from '../models/book';
 // import { Author,AUTHORS } from '../models/author';
@@ -30,25 +30,32 @@ export class BooksService {
   //   return of(this.book);
   // }
   getBook(id:number):Observable<Book> {
-    this.books$.pipe(
+    // this.books$.pipe(
+    //   map(books => {
+    //      return books.find(book => book.id == id)
+    //   }),
+    // ).subscribe(book => this.book = book as Book);
+    //   return of(this.book);
+    return this.books$.pipe(
       map(books => {
          return books.find(book => book.id == id)
-      }),
-    ).subscribe(book => this.book = book as Book);
-      return of(this.book);
+      }) ,
+    ) as Observable<Book>;
+
 
   }
 
   //do poprawy
   searchBooks(title:string):Observable<Book[]> {
-    if(title != '') {
-      this.books$ = this.books$.pipe(
-        map(books => {
-          return books.filter( (book) => { book.title.includes(title) } );
-        })
-      );
-    }
 
-    return  title == '' ?  this.allBooks$ : this.books$;
+    return title.length > 0
+    ? this.books$.pipe(
+      map(books => {
+        return books.filter( (book) => { book.title.includes(title) } );
+      }),
+      tap(books => console.log(books))
+    )
+    : this.books$;
+
   }
 };
