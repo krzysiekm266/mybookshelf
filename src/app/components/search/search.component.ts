@@ -21,9 +21,10 @@ export class SearchComponent implements OnInit {
     this.show = true;
   }
   search() {
-    let value:string = this.searchForm.get('search')?.value as string;
-    console.log(value)
-    this._bookService.searchBooks(value).subscribe() ;
-    this._router.navigate(['/','bookshelf','books']);
+    let value = this.searchForm.get('search')?.value as string;
+    //console.log(value)
+    this._bookService.searchBooks(value) ;
+
+    return this._router.navigate(['/','bookshelf','books']);
   }
 }

@@ -46,16 +46,30 @@ export class BooksService {
   }
 
   //do poprawy
-  searchBooks(title:string):Observable<Book[]> {
+  searchBooks(title:string) {
 
-    return title.length > 0
-    ? this.books$.pipe(
-      map(books => {
-        return books.filter( (book) => { book.title.includes(title) } );
-      }),
-      tap(books => console.log(books))
-    )
-    : this.books$;
+    if(title) {
+      this.books$ = this.books$.pipe(
+        filter( (books,index) => { return books[index].title.includes(title,0) }),
+        tap(books => console.log(books))
+
+      );
+        this.books$.subscribe();
+    }
+    else {
+      this.books$ = this.allBooks$;
+      this.books$.subscribe();
+    }
+    return this.books$;
+    // return title !=''
+    // ? this.books$ = this.books$.pipe(
+    //   // map(books => {
+    //   //   return books.filter( (book) => { book.title.includes(title) } );
+    //   // }),
+    //   filter( (books,index) => { return books[index].title.includes(title,0)} ),
+    //   tap(books => console.log(books))
+    // )
+    // : this.allBooks$.subscribe();
 
   }
 };

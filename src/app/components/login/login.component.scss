@@ -75,6 +75,30 @@ p {
   justify-content: center;
   //background-color: aqua;
 }
+
+.demo-sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width:95%;
+  background-color: aliceblue;
+  border: 2px solid black;
+  h1 {
+    font-size: 16px;
+    font-weight: bold;
+    width: auto;
+    margin: auto;
+  }
+  p {
+    color:black;
+    padding: 2px;
+    justify-content: flex-start;
+
+  }
+
+}
 @media screen and (min-width:600px) {
 
   form {
@@ -84,6 +108,9 @@ p {
     display: none;
   }
   .content , .errors {
+    width: 50%;
+  }
+  .demo-sign {
     width: 50%;
   }
 

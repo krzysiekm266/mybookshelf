@@ -3,10 +3,14 @@
 
   <div class="details">
     <span>Book details</span>
-    <p> Author: {{book?.author?.name}}</p>
-    <p> Title: {{book?.title}}</p>
-    <p> Description: {{book?.description}}</p>
-    <p> Cover: {{book?.cover}}</p>
+    <img  class="book-cover" src="{{ book?.cover }}" alt="book cover picture">
+    <div class="book-info">
+      <p> Author: {{book?.author?.name}}</p>
+      <p> Title: {{book?.title}}</p>
+      <p> Description: {{book?.description}}</p>
+
+    </div>
+
   </div>
   <div class="navigation">
     <a class="back-link" [routerLink]="['../../books']">Close</a>
