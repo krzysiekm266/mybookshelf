@@ -1,7 +1,13 @@
 <div *ngIf="show" class="search" id="search">
   <form (ngSubmit)="search()" [formGroup]="searchForm" >
     <div class="form-row">
+
+
       <input type="text" name="search" formControlName="search" placeholder="book title...">
+      <button type="button" (click)="resetSearch()" style="width:30px;min-width:30px">
+        <fa-icon   [icon]="faArrowRotateLeft" size="lg"></fa-icon>
+
+      </button>
       <button type="submit">Search</button>
     </div>
 

@@ -1,7 +1,7 @@
-import { Book, BOOKS } from './../../models/book';
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Book } from './../../models/book';
+import { Component, Input, DoCheck, OnInit, SimpleChanges } from '@angular/core';
 import { BooksService } from 'src/app/services/books.service';
-import { Observable,of,map } from 'rxjs';
+import { faList } from "@fortawesome/free-solid-svg-icons";
 
 
 @Component({
@@ -11,23 +11,26 @@ import { Observable,of,map } from 'rxjs';
 
 
 })
-export class BooksListComponent implements OnInit,OnChanges {
-  @Input() books:Book[] = [];
-
+export class BooksListComponent implements OnInit,DoCheck {
+  //font awsome icons
+  faList = faList;
+  //properties
+  @Input() books:Book[] ;
 
   constructor( private _booksService:BooksService) {
-
+    this.books = [];
    }
-  ngOnChanges(changes: SimpleChanges): void {
-    throw new Error('Method not implemented.');
-    this._booksService.getBooks().subscribe(books => this.books = books);
 
+  ngDoCheck(): void {
+    if(this._booksService.searchExecuted()) {
+      this.ngOnInit();
+    }
   }
+
 
   ngOnInit(): void {
 
     this._booksService.getBooks().subscribe(books => this.books = books);
-
 
   }
 

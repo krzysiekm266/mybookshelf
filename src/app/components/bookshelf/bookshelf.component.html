@@ -1,5 +1,4 @@
 <div class="bookshelf"  >
-  <span class="demo-sign">Demo version</span>
   <div class="logo">
     <app-logo></app-logo>
   </div>
@@ -14,7 +13,7 @@
   <div class="content" [@routeAnimations]="prepareRoute(bookshelfOutlet)" >
 
     <router-outlet #bookshelfOutlet="outlet" ></router-outlet>
-    <router-outlet  name="bookshelf"></router-outlet>
+
 
   </div>
   <app-footer [menu]="menu"></app-footer>

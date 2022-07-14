@@ -5,14 +5,16 @@
     <table>
       <tr class="header">
         <th>Title</th>
-        <th>Menu</th>
+        <th>Details</th>
       </tr>
       <tr *ngFor="let book of books" class="title-row">
         <td class="title">
           {{ book.title }}
         </td>
         <td>
-          <a [routerLink]="['../book-details',book.id]">details </a>
+          <a [routerLink]="['../book-details',book.id]" style="display: block;  width: 100%; color:black">
+            <fa-icon [icon]="faList" size="lg" ></fa-icon>
+          </a>
         </td>
       </tr>
     </table>

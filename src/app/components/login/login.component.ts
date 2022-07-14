@@ -48,4 +48,10 @@ export class LoginComponent implements OnInit {
   clearLoginFailMsg() {
     this._loginFail = false;
   }
+  //for demo version
+  paste() {
+    this.loginForm.get('email')?.setValue('guest@guest.mail');
+    this.loginForm.get('password')?.setValue('guest');
+
+  }
 }

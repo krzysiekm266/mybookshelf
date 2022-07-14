@@ -50,6 +50,8 @@ const routes: Routes = [
         //outlet: 'bookshelf',
 
       },
+      //{ path: 'search-redirect',redirectTo:'books',pathMatch: 'full'},
+      { path: 'details',redirectTo:'book-details/:id',pathMatch: 'full'},
 
       { path: '', redirectTo: 'books', pathMatch: 'full' },
     ],
