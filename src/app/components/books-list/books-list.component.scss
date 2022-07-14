@@ -37,6 +37,7 @@ span:not(.page-title) {
   text-transform: capitalize;
   background-color: $bg-color;
   color: $text-color;
+  font-family: 'Bree Serif', serif;
 }
 
 table,
@@ -71,6 +72,7 @@ table {
 
 td.title {
   text-align: left;
+  padding-left: 10px;
 }
 
 .header {

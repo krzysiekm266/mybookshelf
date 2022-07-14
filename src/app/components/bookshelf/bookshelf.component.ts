@@ -2,7 +2,7 @@ import { UserService } from './../../services/user.service';
 import { Component, Input, OnInit, OnChanges} from '@angular/core';
 import { ChildrenOutletContexts, Router, RouterOutlet } from '@angular/router';
 import { slideInBottomAnimation ,slideInLeftAnimation} from 'src/app/animations/animations';
-
+import { faFaceSmile} from "@fortawesome/free-solid-svg-icons";
 @Component({
   selector: 'app-bookshelf',
   templateUrl: './bookshelf.component.html',
@@ -11,8 +11,10 @@ import { slideInBottomAnimation ,slideInLeftAnimation} from 'src/app/animations/
 
 })
 export class BookshelfComponent implements OnInit {
-
-   menu:string[] = [];
+  //font awsome icons
+  faFaceSmile = faFaceSmile;
+  //properties
+  menu:string[] = [];
   @Input() userName!:string;
 
   constructor(private _userService:UserService, private _router:Router) {

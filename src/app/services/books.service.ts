@@ -10,44 +10,57 @@ import { Book,BOOKS, } from '../models/book';
   providedIn: 'root'
 })
 export class BooksService {
-  books$:Observable<Book[]> ;
+  books$:Observable<Book[]> | undefined;
   allBooks$:Observable<Book[]> ;
   search:boolean;
+  private serviceStart:boolean;
+
   constructor() {
     this.books$ = of(BOOKS);
     this.allBooks$ = of(BOOKS);
     this.search = false;
+    this.serviceStart = false;
+
 
   }
+  stopService() {
+    this.books$ = undefined;
+    return this.serviceStart = false;
+  }
+  startService() {
+    this.books$ = this.allBooks$;
+    this.serviceStart = true;
+  }
+  getBooks():Observable<Book[]> | undefined {
 
-  getBooks():Observable<Book[]>{
-
-    return this.books$;
+    return this.serviceStart ? this.books$ : undefined;
   }
 
   getBook(id:number):Observable<Book> {
 
-    return this.books$.pipe(
+    return this.books$?.pipe(
       map(books => {
          return books.find(book => book.id == id)
       }) ,
     ) as Observable<Book>;
 
   }
+
   searchExecuted() {
     return this.search = true ;
   }
-  //do poprawy
+
   searchBooks(title:string):Observable<Book[]> {
     this.search = false;
     this.books$ = this.allBooks$;
     if(title != '') {
       this.books$ = this.books$.pipe(
         map( books => {
-          return books.filter( (books,index) => { return books.title.includes(title) })
+          return books.filter( (book) => {
+            return book.title.toLowerCase().includes(title.toLowerCase());
+          })
 
         }),
-        //tap(books => console.log('Search fraze: '+ title +' find: ' + books.length)),
       );
 
     }

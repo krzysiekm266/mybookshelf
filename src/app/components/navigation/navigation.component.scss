@@ -3,7 +3,7 @@
 * {
   display: flex;
 }
-
+@font-face { font-family: Cinamon; src: url('/assets/fonts/CinnamonCoffeCake-Ea2Pr.ttf'); }
 h1 {
   color: aliceblue;
   text-transform: uppercase;
@@ -26,8 +26,9 @@ a {
   height: 60px;
   text-decoration: none;
   letter-spacing: 2px;
-  text-transform: uppercase;
-  font-size: larger;
+  text-transform: capitalize;
+  font-size: 24px;
+  font-family: Cinamon;
   color: $text-color;
   background-color: $bg-color;
   cursor: pointer;
@@ -61,6 +62,7 @@ span {
   height: 10vh;
   gap: 16px;
   background-color: $bg-color;
+
 }
 
 .hamburger {
@@ -182,13 +184,15 @@ span {
     justify-content: center;
     width: 100%;
 
+
   }
   .user-name {
     position: relative;
     color: $text-color;
-    font-size:medium ;
-    font-weight: bold;
     text-transform: none;
+    font-weight: bold;
+    font-size:larger ;
+
 
     &:hover {
       color: $text-color;
@@ -213,6 +217,8 @@ span {
     font-weight: 600;
     text-transform: capitalize;
     font-size: medium;
+    font-size: larger;
+
   }
   .logo {
     display: flex;

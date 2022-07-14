@@ -7,7 +7,10 @@
     <app-search ></app-search>
   </div>
   <div class="mobile-auth" *ngIf="userLogin()">
-    <p class="user">{{ login() }} </p>
+    <p class="user">
+      <fa-icon class="user-icon" [icon]="faFaceSmile" size="1x" style="color: green; padding-inline: 4px"></fa-icon>
+      {{ login() }}
+    </p>
     <a class="mobile-logout-link" (click)="logout()">Logout</a>
   </div>
   <div class="content" [@routeAnimations]="prepareRoute(bookshelfOutlet)" >

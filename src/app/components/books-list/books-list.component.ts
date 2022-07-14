@@ -30,7 +30,7 @@ export class BooksListComponent implements OnInit,DoCheck {
 
   ngOnInit(): void {
 
-    this._booksService.getBooks().subscribe(books => this.books = books);
+    this._booksService.getBooks()?.subscribe(books => this.books = books);
 
   }
 

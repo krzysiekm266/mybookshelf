@@ -3,6 +3,7 @@ import { UserService } from './../../services/user.service';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { faLess } from '@fortawesome/free-brands-svg-icons';
+import { BooksService } from 'src/app/services/books.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ import { faLess } from '@fortawesome/free-brands-svg-icons';
 export class LoginComponent implements OnInit {
   loginForm!:FormGroup;
   private _loginFail:boolean = false;
-  constructor(private _fb:FormBuilder,private _userService:UserService,private _router:Router) { }
+  constructor(private _fb:FormBuilder,private _userService:UserService,private _router:Router,private _booksService:BooksService) { }
 
   ngOnInit(): void {
     this.loginForm = this._fb.group({
@@ -31,6 +32,7 @@ export class LoginComponent implements OnInit {
     if(login) {
       this.loginForm.get('email')?.setValue('');
       this.loginForm.get('password')?.setValue('');
+      this._booksService.startService();
       this._router.navigate(['/','bookshelf','books']);
       return true;
     }
