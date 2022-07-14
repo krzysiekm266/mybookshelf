@@ -1,6 +1,6 @@
-import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
-import { slideInBottomAnimation,slideInLeftAnimation } from 'src/app/animations/animations';
-import { Component, Output } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { slideInBottomAnimation } from 'src/app/animations/animations';
+import { Component } from '@angular/core';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { Component, Output } from '@angular/core';
   animations:[slideInBottomAnimation]
 
 })
-export class AppComponent {
+export class AppComponent  {
   constructor() { }
 
   prepareRoute(outlet:RouterOutlet) {

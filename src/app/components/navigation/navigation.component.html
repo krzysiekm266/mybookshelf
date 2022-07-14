@@ -18,7 +18,7 @@
       <fa-icon class="user-icon" [icon]="faFaceSmile" size="1x"></fa-icon>
       {{ getUserLogin() }}
       <fa-icon class="toggle-icon" [class.transform180]="userMenu" [icon]="faAnglesDown" size="lg"></fa-icon>
-      <div *ngIf="userMenu" class="user-menu" id="#umenu">
+      <div *ngIf="userMenu" class="user-menu" id="umenu">
         <a class="logout-link" (click)="logout()">Logout</a>
       </div>
     </a>

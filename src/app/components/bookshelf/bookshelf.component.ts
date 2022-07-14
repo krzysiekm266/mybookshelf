@@ -1,7 +1,7 @@
 import { UserService } from './../../services/user.service';
-import { Component, Input, OnInit, OnChanges} from '@angular/core';
-import { ChildrenOutletContexts, Router, RouterOutlet } from '@angular/router';
-import { slideInBottomAnimation ,slideInLeftAnimation} from 'src/app/animations/animations';
+import { Component, Input, OnInit,} from '@angular/core';
+import {  Router, RouterOutlet } from '@angular/router';
+import { slideInLeftAnimation} from 'src/app/animations/animations';
 import { faFaceSmile} from "@fortawesome/free-solid-svg-icons";
 @Component({
   selector: 'app-bookshelf',
@@ -30,10 +30,10 @@ export class BookshelfComponent implements OnInit {
     this.menu = [
       'books','about','register',
     ];
+
+
   }
-  // ngOnChanges():void {
-  //   this.userName = this._userService.getUserName();
-  // }
+
   userLogin():boolean {
 
     return  this._userService.loginStatus();
@@ -48,4 +48,5 @@ export class BookshelfComponent implements OnInit {
     this._router.navigate(['/','bookshelf','login']);
 
   }
+
 }
