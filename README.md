@@ -11,8 +11,9 @@ To open in new tab: ctrl+left click on a link. <br>
 Screenshots :
 ![Screen](/screenshots/bookshelfscr1.png "Screen") <br>
 ![Screen](/screenshots/bookshelfscr2.png "Screen") <br>
-Mobile version: <br.>
-![Screen](/screenshots/bookshelfmobile.png "Screen" 200x400) <br>
+<br>
+Mobile version: <br>
+![Screen](/screenshots/bookshelfmobile.png "Screen" 200 x 400) <br>
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
