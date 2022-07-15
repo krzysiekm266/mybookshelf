@@ -1,10 +1,10 @@
 # Mybookshelf
 This projects was created as a part of my CV. <br>
-It is simple idea for a bookshlef where you can catalog your books titles.
+It is simple idea for a bookshlef where you can catalog your books titles. <br>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4. <br>
 
 ## Demo and sreenshots 
-Here is link to interactive demo : https://krzysiekm266.github.io/mybookshelf
+Here is link to interactive demo : https://krzysiekm266.github.io/mybookshelf <br>
 Screenshots will be available soon.
 ## Development server
 
