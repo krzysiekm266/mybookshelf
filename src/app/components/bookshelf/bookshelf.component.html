@@ -3,9 +3,9 @@
     <app-logo></app-logo>
   </div>
   <app-navigation [menu]="menu"></app-navigation>
-  <div class="mobile-search">
+  <!-- <div class="mobile-search mobile-600">
     <app-search ></app-search>
-  </div>
+  </div> -->
   <div class="mobile-auth" *ngIf="userLogin()">
     <p class="user">
       <fa-icon class="user-icon" [icon]="faFaceSmile" size="1x" style="color: green; padding-inline: 4px"></fa-icon>
@@ -13,11 +13,11 @@
     </p>
     <a class="mobile-logout-link" (click)="logout()">Logout</a>
   </div>
+  <div class="mobile-search">
+    <app-search ></app-search>
+  </div>
   <div class="content" [@routeAnimations]="prepareRoute(bookshelfOutlet)" >
-
     <router-outlet #bookshelfOutlet="outlet" ></router-outlet>
-
-
   </div>
   <app-footer [menu]="menu"></app-footer>
 </div>

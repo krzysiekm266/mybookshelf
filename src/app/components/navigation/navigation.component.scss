@@ -187,19 +187,8 @@ span {
 
   }
   .user-name {
-    position: relative;
-    color: $text-color;
-    text-transform: none;
-    font-weight: bold;
-    font-size:larger ;
+    display: none;
 
-
-    &:hover {
-      color: $text-color;
-      .toggle-icon {
-        color: $hover-color;
-      }
-    }
 
   }
   .user-icon {
@@ -232,5 +221,22 @@ span {
 @media screen and (min-width:850px) {
   .search {
     display: flex;
+  }
+  .user-name {
+    display: flex;
+    position: relative;
+    color: $text-color;
+    text-transform: none;
+    font-weight: bold;
+    font-size:larger ;
+
+
+    &:hover {
+      color: $text-color;
+      .toggle-icon {
+        color: $hover-color;
+      }
+    }
+
   }
 }
