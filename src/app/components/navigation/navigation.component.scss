@@ -3,7 +3,7 @@
 * {
   display: flex;
 }
-@font-face { font-family: Cinamon; src: url('/app/assets/fonts/CinnamonCoffeCake-Ea2Pr.ttf'); }
+@font-face { font-family: Cinamon; src: url('./src/app/assets/fonts/CinnamonCoffeCake-Ea2Pr.ttf'); }
 h1 {
   color: aliceblue;
   text-transform: uppercase;
