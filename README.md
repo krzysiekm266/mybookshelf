@@ -5,6 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Demo and sreenshots 
 Here is link to interactive demo : https://krzysiekm266.github.io/mybookshelf <br>
+To open in new tab: ctrl+left click on a link. <br>
 Screenshots will be available soon.
 ## Development server
 
