@@ -6,7 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Demo and sreenshots 
 Here is link to interactive demo : https://krzysiekm266.github.io/mybookshelf <br>
 To open in new tab: ctrl+left click on a link. <br>
-Screenshots will be available soon.
+Screenshots :
+![Screen](/screenshots/bookshelfscr1.png "Screen") <br>
+![Screen](/screenshots/bookshelfscr2.png "Screen") <br>
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
