@@ -13,7 +13,7 @@ Screenshots :
 ![Screen](/screenshots/bookshelfscr2.png "Screen") <br>
 <br>
 Mobile version: <br>
-![Screen](/screenshots/bookshelfmobile.png "Screen" 200 x 400) <br>
+![Screen](/screenshots/bookshelfmobile.png "Screen") <br>
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
