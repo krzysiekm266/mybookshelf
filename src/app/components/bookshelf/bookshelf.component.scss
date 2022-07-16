@@ -3,7 +3,7 @@
 * {
   display: flex;
 }
-@font-face { font-family: Cinamon; src: url('/assets/fonts/CinnamonCoffeCake-Ea2Pr') format(ttf); }
+//@font-face { font-family: Cinamon; src: url('/assets/fonts/CinnamonCoffeCake-Ea2Pr') format(ttf); }
 
 .bookshelf {
   height: 100vh;
@@ -35,7 +35,7 @@
 .mobile-auth {
   display:flex;
   width: 100%;
-  font-family: Cinamon;
+  font-family: Arial;
 
 }
 
